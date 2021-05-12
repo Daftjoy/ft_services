@@ -16,7 +16,7 @@ declare(strict_types=1);
  * cookie. Needs to be 32 chars long.
  */
 $cfg['blowfish_secret'] = 'qwertyuiopfg23456789456789dzxcvlghjk0456789'; /* YOU MUST FILL IN THIS FOR COOKIE AUTH! */
-$cfg['PmaAbsoluteUri'] = '/phpmyadmin';
+#$cfg['PmaAbsoluteUri'] = '/phpmyadmin';
 
 /**
  * Servers configuration
@@ -160,3 +160,5 @@ $cfg['TempDir'] = '/etc/phpmyadmin/tmp';
  * You can find more configuration options in the documentation
  * in the doc/ folder or at <https://docs.phpmyadmin.net/>.
  */
+
+$_SERVER['HTTP_HOST'] = 'http://192.168.99.106:5000';
