@@ -23,8 +23,8 @@ kubectl apply -f srcs/nginx.yaml >/dev/null
 kubectl apply -f srcs/wordpress.yaml >/dev/null 
 kubectl apply -f srcs/phpmyadmin.yaml >/dev/null 
 kubectl apply -f srcs/mysql.yaml >/dev/null
-kubectl apply -f srcs/grafana.yaml >/dev/null
 kubectl apply -f srcs/grafana-config.yaml >/dev/null 
+kubectl apply -f srcs/grafana.yaml >/dev/null
 kubectl apply -f srcs/influxdb.yaml >/dev/null
 kubectl apply -f srcs/telegraf-config.yaml >/dev/null   
 kubectl apply -f srcs/telegraf.yaml >/dev/null   

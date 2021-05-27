@@ -17,16 +17,18 @@ metadata:
   name: grafana
   labels:
     app: grafana
+  annotations:
+    metallb.universe.tf/allow-shared-ip: shared
 spec:
   type: LoadBalancer
+  loadBalancerIP: 192.168.99.106
+  selector:
+    app: grafana
   ports:
     - name: grafana
       port: 3000
       targetPort: 3000
       protocol: TCP
-  selector:
-    app: grafana
-  loadBalancerIP: 192.168.99.126
 
 ---
 
@@ -54,8 +56,7 @@ spec:
         image: grafana
         imagePullPolicy: Never
         ports:
-        - name: grafana
-          containerPort: 3000
+        - containerPort: 3000
         volumeMounts:
         - name: grafana-config
           mountPath: /usr/share/grafana/conf/grafana.ini
