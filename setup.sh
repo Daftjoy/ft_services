@@ -12,11 +12,11 @@ minikube service list
 docker build -t nginx srcs/nginx >/dev/null 
 docker build -t wordpress srcs/wordpress >/dev/null 
 docker build -t mysql srcs/mysql >/dev/null 
-docker build -t phpmyadmin srcs/phpmyadmin 
-docker build -t grafana srcs/grafana
-docker build -t influxdb srcs/influxdb  
-docker build -t telegraf srcs/telegraf
-docker build -t ftps srcs/ftps  
+docker build -t phpmyadmin srcs/phpmyadmin >/dev/null
+docker build -t grafana srcs/grafana >/dev/null
+docker build -t influxdb srcs/influxdb  >/dev/null
+docker build -t telegraf srcs/telegraf >/dev/null
+docker build -t ftps srcs/ftps  >/dev/null
 
 kubectl apply -f srcs/volumes.yaml >/dev/null 
 kubectl apply -f srcs/nginx.yaml >/dev/null 
